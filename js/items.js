@@ -98,22 +98,62 @@ window.addEventListener("load", function () {
     for (let i = 0; i < removeItemButton.length; i++) {
         removeItemButton[i].addEventListener("click", function () {
             itemBox[i].style.display = "none"
+            updateCartTotal()
 
         })
     }
 
     //Update cart total 
-    function updateCartTotal(){
+    function updateCartTotal() {
         let cartItems = document.querySelectorAll(".cart-list .item-box")
-
-        for(let i=0;i<cartItems.length;i++){
-            let itemPrices = cartItems[i].querySelector(".product-price")
+        let delivery = document.querySelector(".delivery")
+        let subtotalPrice = 0
+        for (let i = 0; i < cartItems.length; i++) {
+            let itemPricesElem = cartItems[i].querySelector(".product-price").innerText
+            let itemQty = cartItems[i].querySelector("#product-quantity").value
+            let itemPrices = itemPricesElem.substring(1,)
+            subtotalPrice += itemPrices * itemQty
+            let subTotal = document.querySelector(".subtotal")
+            subTotal.innerText = "$" + parseFloat(subtotalPrice)
+            if(subtotalPrice < 100){
+                delivery.innerText = "$10.00"
+            }else{
+                delivery.innerText = "$0.00"
+            }
+            let total = document.querySelector(".total")
+            total.innerText = "$" + (parseFloat(subTotal.innerText.substring(1,)) + parseFloat(delivery.innerText.substring(1,)))
+            
         }
     }
-    //code to finish
-    let cartItems = document.querySelectorAll(".cart-list .item-box")
-    console.log(cartItems)
-    console.log(cartItems[0])
+    let itemQtyElems = document.querySelectorAll("#product-quantity")
+    for (let i = 0; i < itemQtyElems.length; i++) {
+        itemQtyElems[i].onchange = function () {
+            updateCartTotal()
+        }
+    }
+
+    // let delivery = document.querySelector(".delivery")
+    // for (let i = 0; i < delivery.length; i++) {
+    //     delivery[i].onchange = function () {
+    //         updateCartTotal()
+    //     }
+    // }
+
+    
+
+
+    // code to finish
+    // let cartItems = document.querySelectorAll(".cart-list .item-box")
+    // let itemPricesElem = cartItems[0].querySelector(".product-price").innerText
+    //         let itemQty = cartItems[0].querySelector("#product-quantity").value
+    //         let itemPrices = itemPricesElem.substring(1,)
+    //         let totalPrice = 0;
+    //         totalPrice += itemPrices*itemQty
+    //         let subTotal = document.querySelector(".subtotal")
+    //         subTotal.innerText = "$" + totalPrice
+    // console.log(itemPrices)
+    // console.log(itemQty)
+    // console.log(subTotal.innerText)
 })
 
 
