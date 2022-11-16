@@ -110,6 +110,7 @@ window.addEventListener("load", function () {
             let itemPrices = cartItems[i].querySelector(".product-price")
         }
     }
+    //code to finish
     let cartItems = document.querySelectorAll(".cart-list .item-box")
     console.log(cartItems)
     console.log(cartItems[0])
