@@ -1,0 +1,335 @@
+@font-face {
+    font-family: 'IcoMoon-Free';
+    src:  url('../fonts/IcoMoon-Free.eot?ocyhon');
+    src:  url('../fonts/IcoMoon-Free.eot?ocyhon#iefix') format('embedded-opentype'),
+      url('../fonts/IcoMoon-Free.ttf?ocyhon') format('truetype'),
+      url('../fonts/IcoMoon-Free.woff?ocyhon') format('woff'),
+      url('../fonts/IcoMoon-Free.svg?ocyhon#IcoMoon-Free') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* body{
+    height:1000vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(222, 222, 222,.5);
+} */
+
+.l-container{
+    background-color: rgb(255, 238, 238,.3);
+    width: 650px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 6px 6px 6px rgb(222, 222, 222);
+    position: relative;
+    top:100px;
+    left:300px;
+}
+
+.l-container .form{
+    position: absolute;
+    top:-10%;
+    left:-50px;
+    background-color: rgb(240, 216, 216);
+    width:380px;
+    height:550px;
+    border-radius: 10px;
+    box-shadow: 8px 2px 8px rgb(222, 222, 222);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index:9;
+    transition: .5s ease-in-out;
+}
+
+
+.l-container .form .hidden{
+    display: none;
+}
+
+.l-container .form h1{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 2px;
+}
+
+.l-container .form input{
+    background-color: transparent;
+    width: 80%;
+    color:black;
+    border: none;
+    border-bottom: 1px solid rgba(140, 140, 140, 0.5);
+    padding:10px;
+    margin:10px 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.l-container .form input:focus{
+    color:rgb(0, 0, 0);
+    outline: none;
+    border-bottom: 1px solid rgb(50, 49, 49);
+    transition: .5s;
+   
+}
+
+.l-container .form input:focus::placeholder{
+    opacity:0;
+}
+
+
+.l-container .form .pwd-area .pwd-box,.l-container .form .pwdCon-area .pwdCon-box{
+    position:relative;
+    background-color: transparent;
+    width: 280px;
+    /* color:black;
+    border: none;
+    border-bottom: 1px solid rgba(140, 140, 140, 0.5); */
+    /* padding:10px;
+    margin:10px 0; */
+    font-size: 12px;
+    letter-spacing: 2px;
+    left:32px;
+}
+
+.l-container .form .pwd-area div input, .l-container .form .pwdCon-area div input{
+    width:280px;
+    position:absolute;
+    left:0;
+    color:black;
+    border: none;
+    border-bottom: 1px solid rgba(140, 140, 140, 0.5);
+
+}
+
+
+.l-container .form .pwd-area div label, .l-container .form .pwdCon-area div label{
+    width:10%;
+    position:absolute;
+    right:0;
+    top:15px;
+    
+    
+}
+.l-container .form .pwd-area div label img, .l-container .form .pwdCon-area div label img{
+   
+    width:50%;
+    margin-top:20%;
+    
+    
+}
+
+
+.l-container .form div a{
+    display: block;
+    padding-top:20px;
+    padding-bottom: 10px;
+    color:gray;
+    cursor:pointer;
+}
+
+.l-container .form div button{
+    margin-top: 50px;
+    height:40px;
+    width: 200px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    box-shadow: 6px 4px 4px rgba(149, 148, 148, 0.6);
+    border:0;
+    cursor:pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size:16px;
+}
+
+.l-container .form div button:hover{
+    background-color: rgb(140, 140, 140,.8);
+    color:#fff;
+    transition: rgba(140, 140, 140, 0.5) .5s ease;
+    font-weight: 700;
+}
+
+.l-container .form .form-info i::before{
+    content: "\ea10";
+    font-family: 'IcoMoon-Free';
+    font-size: 15px;
+    color:rgba(76, 169, 115, 0.5);
+    text-align: left;
+    /* display:none; */
+}
+
+.l-container .form small::before{
+    content: "\21";
+    font-family: 'IcoMoon-Free';
+    font-size: 15px;
+    color:rgba(189, 58, 58, 0.5);
+    text-align: center;
+    margin-right: 5px;
+    /* display:none; */
+}
+
+
+.l-container .form .form-info div{
+    width:350px;
+    height:65px;
+    text-align: center;
+    position: relative;
+}
+
+.l-container div span{
+    position: absolute;
+    left:40px;
+    bottom:2px;
+    display:block;
+    width:300;
+    vertical-align: top;
+}
+
+/* .l-container .form-info{
+    position: absolute;
+} */
+
+
+
+ .l-container small{
+    display:inline-block;
+    /* float:left; */
+    width:280px;
+    text-align: left;
+}
+
+
+.l-container .register, .login{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.l-container .bg{
+    width:50%;
+    height:60%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:20%;
+
+}
+
+.l-container .bg h2{
+    color:black;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top:10px;
+}
+
+/* .l-container .bg div{
+    color:grey;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 50px;
+    height: 40px;
+    width:40px;
+} */
+
+
+
+.l-container .bg p{
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: center;
+    color:grey;
+    /* margin-bottom: 20px; */
+
+}
+
+.l-container .bg button{
+    margin-top: 10px;
+    height:40px;
+    width: 200px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    box-shadow: 6px 4px 4px rgba(149, 148, 148, 0.6);
+    border:0;
+    cursor:pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size:16px;
+}
+
+.l-container .bg button:hover{
+    background-color: rgba(209, 179, 179, 0.5);
+    color:#fff;
+    font-weight: 700;
+    transition: rgba(209, 179, 179, 0.5) .5s ease;
+}
+
+/* .l-container .l-bg div,.r-bg div{
+    float:left;
+    margin-right: 20px;
+} */
+
+.l-container .l-bg{
+    left:5px;
+    
+    
+}
+
+
+
+.l-container .l-bg .icon::before{
+    content: '\e907';
+    font-family: 'IcoMoon-Free';
+    font-size: 50px;
+    color:rgba(209, 179, 179, 0.5);
+    text-align: center;
+}
+
+.l-container .r-bg{
+    right:0px;
+ 
+}
+
+.l-container .r-bg .icon::before{
+    content: '\e900';
+    font-family: 'IcoMoon-Free';
+    font-size:50px;
+    color:rgba(209, 179, 179, 0.5);
+    text-align: center;
+}
+
+.l-container .form .register span i, .l-container .form  .register span small{
+    display:none;
+    float:left;
+    
+}
+
+
+
+/* .l-container .form  .register span small{
+    
+    margin-left:-5px;
+    
+} */
+
+.l-container .form-info{
+    text-align: center;
+}
+

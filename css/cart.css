@@ -1,0 +1,259 @@
+@font-face {
+    font-family: 'IcoMoon-Free';
+    src:  url('../fonts/IcoMoon-Free.eot?ocyhon');
+    src:  url('../fonts/IcoMoon-Free.eot?ocyhon#iefix') format('embedded-opentype'),
+      url('../fonts/IcoMoon-Free.ttf?ocyhon') format('truetype'),
+      url('../fonts/IcoMoon-Free.woff?ocyhon') format('woff'),
+      url('../fonts/IcoMoon-Free.svg?ocyhon#IcoMoon-Free') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+main {
+    width: 1200px;
+    /* height: 1500px; */
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left:40px;
+}
+
+main h1 {
+    height: 100px;
+    line-height: 150px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main h1::after{
+    content:'\eaee';
+    font-family: 'IcoMoon-Free';
+    color:rgb(171, 181, 195);
+}
+
+.preview {
+    width: 60%;
+    margin-top: 0;
+    margin-left:0;
+    height: 200px;
+    border: 2px solid rgb(239, 234, 232);
+    position: relative;
+}
+
+#previewwin input {
+    width: 80%;
+    height: 60%;
+}
+/* .previewnav-h{
+    height:50px;
+}
+.previewnav-h ul{
+    
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.previewnav-h ul li {
+    float: left;
+    width: 50px;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    border-right: 2px solid #ccc;
+    position: relative;
+    background-color: rgba(171, 181, 195,.5);
+}
+
+.previewnav-h ul li .tabactive {
+    border-bottom: 2px solid rgb(193, 211, 225);
+    z-index: 9;
+} */
+
+
+/* 
+
+.previewnav-h ul li span {
+    position: absolute;
+    user-select: none;
+    font-size: 12px;
+    top: -18px;
+    right: 0;
+    display: inline-block;
+    height: 20px;
+} */
+
+
+
+.previewnav-v{
+    height:100%;
+    width:50px;
+    position: absolute;
+    left:0;
+}
+
+
+
+.previewnav-v ul {
+    height:100%;
+    
+    border-right:1px solid #ccc;
+    
+}
+.previewnav-v ul li {
+    
+    width: 50px;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.previewnav-v ul li .tabactive {
+    border-bottom: 2px solid rgb(193, 211, 225);
+    z-index: 9;
+}
+
+.previewnav-v ul li span {
+    position: absolute;
+    user-select: none;
+    font-size: 12px;
+    
+    display: block;
+    height: 20px;
+}
+
+.previewnav-v ul li .icon-close{
+    
+    position:absolute;
+    color:black;
+    right:0;
+    top:0;
+    z-index: 9999;
+    width:5px;
+    height: 5px;
+   
+
+}
+
+
+
+
+.preview .itemcon .wishlistadd{
+    position:relative;
+    
+    
+}
+
+.preview .itemcon .wishlistadd a, 
+.preview .itemcon .wishlistadd .delete {
+    position: absolute;
+    bottom:10px;
+    display:block;
+    text-decoration: none;
+    color:black;
+    margin-left:20px;
+}
+
+.preview .itemcon .wishlistadd a{
+    left:230px;
+    
+}
+.preview .itemcon .wishlistadd .delete{
+
+    left:450px;
+}
+
+
+.tabadd {
+    position: absolute;
+    /* width: 100px; */
+    top: 5px;
+    right: 0;
+}
+
+.tabadd span {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    /* border: 1px solid #ccc; */
+    float: right;
+    margin: 10px 40px;
+    user-select: none;
+}
+
+.tabadd span a{
+    text-decoration: none;
+    color:black;
+}
+
+.itemcon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 30px;
+    left: 0px;
+    box-sizing: border-box;
+    
+}
+
+.itemcon section,
+.itemcon section.itemactive {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.itemcon section.itemactive {
+    display: block;
+}
+
+
+.itemcon section{
+    position: relative;
+}
+
+.itemcon section div {
+    height:100%;
+    position: absolute;
+}
+.itemcon section div.itemimg{
+    left:80px;
+    height:100%;
+    float:left;
+}
+.itemcon section div.itemimg img {
+    
+    height:100%;
+    
+}
+
+.itemcon section div.iteminfo{
+    position: absolute;
+    width:200px;
+    left:250px;
+   
+}
+
+.itemcon section div.iteminfo h4{
+    padding-bottom:20px;
+}
+
+.itemcon .wishlistadd a::before{
+    content:"\e9da";
+    font-family: 'IcoMoon-Free';
+    color:rgba(171, 181, 195,.5);
+    margin-right: 10px;
+}
+
