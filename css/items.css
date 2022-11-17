@@ -153,6 +153,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 10px rgb(140, 140, 140);
     
     
 
@@ -190,6 +191,21 @@
 }
 
 .s-container .product-box .image-box .add {
+    position: absolute;
+    right:50px;
+    top:5px;
+    float:right;
+    font-size: 25px;
+    font-weight: 900;
+    color:black;
+    display: block;
+    height:26px;
+    line-height: 28px;
+    
+
+}
+
+.s-container .product-box .image-box .detail {
     
     position: absolute;
     margin-left: 0;
@@ -220,7 +236,7 @@
 
 
 }
-.s-container .product-box .image-box .add .add-icon{
+.s-container .product-box .image-box .detail .detail-icon{
     display:inline-block;
     margin-top: 5px;
     margin-left: 0;

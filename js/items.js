@@ -1,4 +1,5 @@
 window.addEventListener("load", function () {
+
     //dropdown highlight
     let highlight = document.querySelector(".dropdown_highlight")
 
@@ -11,10 +12,13 @@ window.addEventListener("load", function () {
     let sContainer = document.querySelector(".s-container")
     let titleCheckbox = document.querySelectorAll(".title-area input")
     let filterItem = document.querySelectorAll(".filter-item-list")
-    let addIcon = document.querySelectorAll(".add-icon")
-    let addedNum = document.querySelectorAll(".image-box input")
+    let addBtn = document.querySelectorAll(".add button")
+    // console.log(addBtn)
+
     let itemBox = document.querySelectorAll(".item-box")
 
+    //update cart total value when the webpage refreshes
+    // updateCartTotal()
 
     //show dropdown list
     for (let i = 0; i < dt.length; i++) {
@@ -54,6 +58,7 @@ window.addEventListener("load", function () {
 
     }
 
+    //show/hide filter items
     for (let i = 0; i < titleCheckbox.length; i++) {
         titleCheckbox[i].onclick = function () {
 
@@ -92,45 +97,105 @@ window.addEventListener("load", function () {
 
     })
 
-    //delete cart items
-    let removeItemButton = document.querySelectorAll(".delete-item")
+    //add items to cart
 
-    for (let i = 0; i < removeItemButton.length; i++) {
-        removeItemButton[i].addEventListener("click", function () {
-            itemBox[i].style.display = "none"
-            updateCartTotal()
 
-        })
+    for (let i = 0; i < addBtn.length; i++) {
+        addBtn[i].addEventListener("click", addToCart)
     }
+    
+
+    function addToCart(e) {
+        let button = e.target
+        let productBox = button.parentElement.parentElement.parentElement
+        let productName = productBox.querySelector(".product-name").innerText
+        let productPrice = productBox.querySelector(".price").innerText
+        let productImgSrc = productBox.querySelector(".product-img").src
+        addItemToCart(productName, productPrice, productImgSrc)
+        
+
+    }
+
+    function addItemToCart(name, price, image) {
+        let cartContent = document.querySelector(".cart-content")
+        let itemAdded = document.createElement("div")
+        itemAdded.classList.add("item-box")
+        let cartContentInfo = `<div class="item-box">
+        <img src="${image}" alt="" class="product-img">
+        <div class="detail-box">
+            <div class="product-title">${name}</div>
+            <div class="product-price">${price}</div>
+        </div>
+        <input id="product-quantity" type="number" value="1" min="1">
+        <img class="delete-item" src="images/trash-icon.png">
+
+        </div>`
+        itemAdded.innerHTML = cartContentInfo
+        cartContent.appendChild(itemAdded)
+        updateCartTotal()
+        itemAdded.querySelector(".delete-item").addEventListener("click",removeItem)
+        let itemQtyElems = itemAdded.querySelector("#product-quantity")
+       
+            itemQtyElems.onchange = function () {
+                updateCartTotal()
+            
+        }
+
+    }
+
+    //delete cart items
+    function removeItem(){
+        let removeItemButton = document.querySelectorAll(".delete-item")
+
+        for (let i = 0; i < removeItemButton.length; i++) {
+            removeItemButton[i].addEventListener("click", function () {
+                let cartItems = document.querySelectorAll(".cart-list .item-box")
+                let itemQty = cartItems[i].querySelector("#product-quantity").value
+                let itemBox = document.querySelectorAll(".item-box")
+                itemBox[i].style.display = "none"
+                updateCartTotal()
+    
+            })
+        }
+    }
+   
 
     //Update cart total 
     function updateCartTotal() {
         let cartItems = document.querySelectorAll(".cart-list .item-box")
-        let delivery = document.querySelector(".delivery")
         let subtotalPrice = 0
         for (let i = 0; i < cartItems.length; i++) {
             let itemPricesElem = cartItems[i].querySelector(".product-price").innerText
+            let itemBox = document.querySelectorAll(".item-box")
             let itemQty = cartItems[i].querySelector("#product-quantity").value
+            // console.log(itemQty)
+            if (itemBox[i].style.display == "none") {
+                itemQty = 0
+            }
+            // console.log(itemQty)
             let itemPrices = itemPricesElem.substring(1,)
             subtotalPrice += itemPrices * itemQty
+            console.log(subtotalPrice)
             let subTotal = document.querySelector(".subtotal")
             subTotal.innerText = "$" + parseFloat(subtotalPrice)
-            if(subtotalPrice < 100){
+            let delivery = document.querySelector(".delivery")
+            if (subtotalPrice < 100 && subtotalPrice !== 0) {
                 delivery.innerText = "$10.00"
-            }else{
+            } else {
                 delivery.innerText = "$0.00"
             }
             let total = document.querySelector(".total")
+            console.log(total)
             total.innerText = "$" + (parseFloat(subTotal.innerText.substring(1,)) + parseFloat(delivery.innerText.substring(1,)))
-            
+
         }
     }
-    let itemQtyElems = document.querySelectorAll("#product-quantity")
-    for (let i = 0; i < itemQtyElems.length; i++) {
-        itemQtyElems[i].onchange = function () {
-            updateCartTotal()
-        }
-    }
+    // let itemQtyElems = document.querySelectorAll("#product-quantity")
+    // for (let i = 0; i < itemQtyElems.length; i++) {
+    //     itemQtyElems[i].onchange = function () {
+    //         updateCartTotal()
+    //     }
+    // }
 
     // let delivery = document.querySelector(".delivery")
     // for (let i = 0; i < delivery.length; i++) {
@@ -139,7 +204,7 @@ window.addEventListener("load", function () {
     //     }
     // }
 
-    
+
 
 
     // code to finish
