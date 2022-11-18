@@ -140,10 +140,10 @@ window.addEventListener("load", function () {
             cartContent.appendChild(itemAdded)
             updateCartTotal()
             itemAdded.querySelector(".delete-item").addEventListener("click", removeItem)
-            // let itemQtyElems = itemAdded.querySelector("#product-quantity")
-            // itemQtyElems.onchange = function () {
-            //     updateCartTotal()
-            // }
+            let itemQtyElems = itemAdded.querySelector("#product-quantity")
+            itemQtyElems.onchange = function () {
+                updateCartTotal()
+            }
         }
 
         if (!cartContent.hasChildNodes()) {
@@ -221,35 +221,9 @@ window.addEventListener("load", function () {
 
         }
     }
-    // let itemQtyElems = document.querySelectorAll("#product-quantity")
-    // for (let i = 0; i < itemQtyElems.length; i++) {
-    //     itemQtyElems[i].onchange = function () {
-    //         updateCartTotal()
-    //     }
-    // }
-
-    // let delivery = document.querySelector(".delivery")
-    // for (let i = 0; i < delivery.length; i++) {
-    //     delivery[i].onchange = function () {
-    //         updateCartTotal()
-    //     }
-    // }
-
-
-
-
-    // code to finish
-    // let cartItems = document.querySelectorAll(".cart-list .item-box")
-    // let itemPricesElem = cartItems[0].querySelector(".product-price").innerText
-    //         let itemQty = cartItems[0].querySelector("#product-quantity").value
-    //         let itemPrices = itemPricesElem.substring(1,)
-    //         let totalPrice = 0;
-    //         totalPrice += itemPrices*itemQty
-    //         let subTotal = document.querySelector(".subtotal")
-    //         subTotal.innerText = "$" + totalPrice
-    // console.log(itemPrices)
-    // console.log(itemQty)
-    // console.log(subTotal.innerText)
+    
+    //transfer cart info from items.html to cart.html
+    
 })
 
 
