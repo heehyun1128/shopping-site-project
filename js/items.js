@@ -103,7 +103,7 @@ window.addEventListener("load", function () {
     for (let i = 0; i < addBtn.length; i++) {
         addBtn[i].addEventListener("click", addToCart)
     }
-    
+
 
     function addToCart(e) {
         let button = e.target
@@ -112,39 +112,70 @@ window.addEventListener("load", function () {
         let productPrice = productBox.querySelector(".price").innerText
         let productImgSrc = productBox.querySelector(".product-img").src
         addItemToCart(productName, productPrice, productImgSrc)
-        
+
 
     }
 
     function addItemToCart(name, price, image) {
         let cartContent = document.querySelector(".cart-content")
-        let itemAdded = document.createElement("div")
-        itemAdded.classList.add("item-box")
-        let cartContentInfo = `<div class="item-box">
-        <img src="${image}" alt="" class="product-img">
-        <div class="detail-box">
-            <div class="product-title">${name}</div>
-            <div class="product-price">${price}</div>
-        </div>
-        <input id="product-quantity" type="number" value="1" min="1">
-        <img class="delete-item" src="images/trash-icon.png">
+        // let itemAdded = document.createElement("div")
 
-        </div>`
-        itemAdded.innerHTML = cartContentInfo
-        cartContent.appendChild(itemAdded)
-        updateCartTotal()
-        itemAdded.querySelector(".delete-item").addEventListener("click",removeItem)
-        let itemQtyElems = itemAdded.querySelector("#product-quantity")
-       
-            itemQtyElems.onchange = function () {
-                updateCartTotal()
-            
+        // itemAdded.classList.add("item-box")
+        let cartContentInfo = `
+               
+                    <img src="${image}" alt="" class="product-img">
+                    <div class="detail-box">
+                        <div class="product-title">${name}</div>
+                        <div class="product-price">${price}</div>
+                    </div>
+                    <input id="product-quantity" type="number" value="1" min="1">
+                    <img class="delete-item" src="images/trash-icon.png">
+                
+                `
+        function createItem() {
+            let itemAdded = document.createElement("div")
+
+            itemAdded.classList.add("item-box")
+            itemAdded.innerHTML = cartContentInfo
+            cartContent.appendChild(itemAdded)
+            updateCartTotal()
+            itemAdded.querySelector(".delete-item").addEventListener("click", removeItem)
+            // let itemQtyElems = itemAdded.querySelector("#product-quantity")
+            // itemQtyElems.onchange = function () {
+            //     updateCartTotal()
+            // }
         }
 
+        if (!cartContent.hasChildNodes()) {
+
+            createItem()
+        } else {
+            let itemBox = document.querySelectorAll(".item-box")
+            let itemExists = false;
+            let index = 0
+            for (let i = 0; i < itemBox.length; i++) {
+                if (itemBox[i].querySelector("img").src == `${image}`) {
+                    itemExists = true
+                    index = i
+                    break
+                } else {
+                    itemExists = false
+                }
+            }
+            if (itemExists == true) {
+                let qty = parseInt(itemBox[index].querySelector("#product-quantity").value)
+                console.log(qty)
+                qty += 1
+                itemBox[index].querySelector("#product-quantity").value = qty
+                updateCartTotal()
+            } else {
+                createItem()
+            }
+        }
     }
 
     //delete cart items
-    function removeItem(){
+    function removeItem() {
         let removeItemButton = document.querySelectorAll(".delete-item")
 
         for (let i = 0; i < removeItemButton.length; i++) {
@@ -154,11 +185,11 @@ window.addEventListener("load", function () {
                 let itemBox = document.querySelectorAll(".item-box")
                 itemBox[i].style.display = "none"
                 updateCartTotal()
-    
+
             })
         }
     }
-   
+
 
     //Update cart total 
     function updateCartTotal() {
@@ -175,7 +206,7 @@ window.addEventListener("load", function () {
             // console.log(itemQty)
             let itemPrices = itemPricesElem.substring(1,)
             subtotalPrice += itemPrices * itemQty
-            console.log(subtotalPrice)
+
             let subTotal = document.querySelector(".subtotal")
             subTotal.innerText = "$" + parseFloat(subtotalPrice)
             let delivery = document.querySelector(".delivery")
@@ -185,7 +216,7 @@ window.addEventListener("load", function () {
                 delivery.innerText = "$0.00"
             }
             let total = document.querySelector(".total")
-            console.log(total)
+
             total.innerText = "$" + (parseFloat(subTotal.innerText.substring(1,)) + parseFloat(delivery.innerText.substring(1,)))
 
         }
