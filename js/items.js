@@ -164,7 +164,7 @@ window.addEventListener("load", function () {
             }
             if (itemExists == true) {
                 let qty = parseInt(itemBox[index].querySelector("#product-quantity").value)
-                console.log(qty)
+
                 qty += 1
                 itemBox[index].querySelector("#product-quantity").value = qty
                 updateCartTotal()
@@ -221,9 +221,155 @@ window.addEventListener("load", function () {
 
         }
     }
-    
-    //transfer cart info from items.html to cart.html
-    
-})
 
+    //get price filter element
+
+
+    // let filterPriceMin = document.querySelectorAll('.fp-min')
+    // let filterPriceMax = document.querySelectorAll('.fp-max')
+    let productBox = document.querySelectorAll(".product-box")
+    let filterPriceBox = document.querySelectorAll(".filter-price .left")
+    for (let i = 0; i < filterPriceBox.length; i++) {
+        filterPriceBox[i].addEventListener("change", function () {
+
+            if (!filterPriceBox[i].checked) {
+                for (let i = 0; i < filterPriceBox.length; i++) {
+                    productBox[i].style.display = "block"
+                }
+            } else {
+                if (this.checked) {
+
+                    let filterPriceMin = this.nextElementSibling.innerText.substr(1,)
+                    let filterPriceMax = this.nextElementSibling.nextElementSibling.innerText.substr(1,)
+                    // console.log(this.nextElementSibling.innerText.substr(1,))
+                    // console.log(this.nextElementSibling.nextElementSibling.innerText.substr(1,))
+                    comparePrice(filterPriceMin, filterPriceMax)
+                }
+
+            }
+        })
+    }
+
+
+
+    function comparePrice(min, max) {
+
+        if (min == "") {
+            min = 0
+
+        }
+
+        if (max == "") {
+            max = "99999999999999999"
+        }
+
+        for (let i = 0; i < productBox.length; i++) {
+            let productPrice = productBox[i].querySelector(".price")
+            let itemPrice = parseFloat(productPrice.innerText.substr(1,))
+
+            if (itemPrice >= parseInt(min) && itemPrice < parseInt(max)) {
+                productBox[i].style.display = "block"
+
+            } else {
+                productBox[i].style.display = "none"
+
+            }
+        }
+    }
+
+
+
+
+
+    //check if item description matches filter info
+
+    let filterTypeBox = document.querySelectorAll(".filter-type .left")
+    let filterBrandBox = document.querySelectorAll(".filter-brand .left")
+    let filterGenderBox = document.querySelectorAll(".filter-gender .left")
+    let filterSizeBox = document.querySelectorAll(".filter-size .left")
+    let filterColorBox = document.querySelectorAll(".filter-color .left")
+    let filterMaterialBox = document.querySelectorAll(".filter-material .left")
+    let filterSaleBox = document.querySelectorAll(".filter-sale .left")
+    let filterClearanceBox = document.querySelectorAll(".filter-clearance .left")
+
+
+    let productType = document.querySelectorAll(".product-box .type")
+    let productBrand = document.querySelectorAll(".product-box .brand")
+    let productGender = document.querySelectorAll(".product-box .gender")
+    let productSize = document.querySelectorAll(".product-box .size")
+    let productColor = document.querySelectorAll(".product-box .color")
+    let productMaterial = document.querySelectorAll(".product-box .material")
+    let productSale = document.querySelectorAll(".product-box .sale")
+    let productClearance = document.querySelectorAll(".product-box .clearance")
+
+
+
+
+
+
+   
+
+    //add eventlistener to filterBoxes
+    filterBoxesClicked(filterTypeBox, productType)
+    filterBoxesClicked(filterBrandBox, productBrand)
+    filterBoxesClicked(filterGenderBox, productGender)
+    filterBoxesClicked(filterSizeBox, productSize)
+    filterBoxesClicked(filterColorBox, productColor)
+    filterBoxesClicked(filterMaterialBox, productMaterial)
+    filterBoxesClicked(filterSaleBox, productSale)
+    filterBoxesClicked(filterClearanceBox, productClearance)
+
+    function filterBoxesClicked(filterBox, filterName) {
+        for (let i = 0; i < filterBox.length; i++) {
+            filterBox[i].addEventListener("change", function () {
+
+                if (!filterBox[i].checked) {
+                    for (let i = 0; i < productBox.length; i++) {
+                        productBox[i].style.display = "block"
+                        console.log(productBox[i])
+                    }
+                } else {
+                    if (this.checked) {
+                    
+                        for (let i = 0; i < filterBox.length; i++) {
+                            filterBox[i].checked = false
+                            this.checked = true
+                            
+                            
+                        }
+                        
+                        
+                        let filterType = this.nextElementSibling.innerText
+                        filterMatch(filterType, filterName)
+
+                    }
+
+                }
+            })
+        }
+    }
+
+    function filterMatch(filterItem, filterName) {
+       
+        // console.log(productBox.length)
+        for (let i = 0; i < productBox.length; i++) {
+            console.log(filterName[i])
+            let itemType = filterName[i].innerText
+
+            if (itemType == filterItem) {
+                productBox[i].style.display = "block"
+
+            } else {
+                productBox[i].style.display = "none"
+
+            }
+        }
+    }
+
+
+
+
+
+
+})
 
