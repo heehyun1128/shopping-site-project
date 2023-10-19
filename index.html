@@ -26,6 +26,8 @@
     <!-- trending clothing display css style sheet -->
     <link rel="stylesheet" href="css/trending.css">
     <link rel="stylesheet" href="css/recommend.css">
+    <link rel="stylesheet" href="css/vacation.css">
+    <link rel="stylesheet" href="css/like.css">
 
 </head>
 
@@ -46,12 +48,17 @@
             <div class="navr">
                 <ul>
 
+
+                    <li>
+                        <form action="/login-signup" method="get">
+                            <button class="register-login" type="submit">Login/Register</button>
+
+                        </form>
+                    </li>
+                    <li></li>
+
                     <a href="#">
-                        <li class="arrow-icon">Events</li>
-                        <li></li>
-                    </a>
-                    <a href="#">
-                        <li class="arrow-icon">News</li>
+                        <li class="arrow-icon">News/Events</li>
                         <li></li>
                     </a>
                     <a href="">
@@ -64,74 +71,91 @@
     <!-- navigation end -->
     <!--  header start -->
     <header class="header w">
-
+    
         <!-- logo -->
-
-        <div class="logo">
-            <ul>
-                <li>
-                    <a href="index.html" title="YC"><img src="images/logo.png" alt="logo"></a>
-                </li>
-            </ul>
-
-        </div>
-        <!-- search -->
         <div class="search">
             <input type="search" name="" id="" placeholder="search">
             <button>OK</button>
         </div>
-
-        <!-- shopping cart -->
-        <div class="shopcart">
-            <a href="#"><i class="bag"></i></a>
-            <a href="#"><i class="count">0</i></a>
-
-            <div class="cart-list">
-                <h2 class="cart-title">Shopping Cart</h2>
-                <div class="cart-content"></div>
-                <table class="total-table">
-                    <caption class="summary-title">Summary</caption>
-                    <tbody >
-                        <tr class="line-item">
-                            <th scope="row">Subtotal</th>
-                            <td>
-                                <span class="subtotal">$0.00</span>
-                                <p></p>
-                            </td>
-                        </tr>
-                        <tr class="line-item">
-                            <th scope="row">Delivery</th>
-                            <td>
-                                <span class="delivery">$0.00</span>
-                                <p></p>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td colspan="2" class="line-break"></td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="sum">Total</th>
-                            <td class="sum-num">
-                                <div>USD
-                                    <span class="total">$0.00</span>
-                                </div>
-                                <p>Tax Calculated At Checkout</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button class="buy">Buy Now</button>
+        <div class="logo">
+            <ul>
+                <li>
+                    <a href="/" title="YC"><img src="images/logo.png" alt="logo"></a>
+                </li>
+            </ul>
+    
+        </div>
+        <!-- search -->
+    
+    
+        <div id="nav-right">
+            <!-- shopping cart -->
+            <div class="shopcart">
+                <a href="#"><i class="bag"></i></a>
+                <a href="#"><i class="count">0</i></a>
+    
+                <form class="cart-list" name="cartlist" action="cart.html" method="get">
+                    <h2 class="cart-title">Shopping Cart</h2>
+                    <div class="cart-content"></div>
+                    <table class="total-table">
+                        <caption class="summary-title">Summary</caption>
+                        <tbody>
+                            <tr class="line-item">
+                                <th scope="row">Subtotal</th>
+                                <td>
+                                    <span class="subtotal">$0.00</span>
+                                    <p></p>
+                                </td>
+                            </tr>
+                            <tr class="line-item">
+                                <th scope="row">Delivery</th>
+                                <td>
+                                    <span class="delivery">$0.00</span>
+                                    <p></p>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td colspan="2" class="line-break"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="sum">Total</th>
+                                <td class="sum-num">
+                                    <div>USD
+                                        <span class="total">$0.00</span>
+                                    </div>
+                                    <p>Tax Calculated At Checkout</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="buy">Buy Now</button>
+    
+    
+    
+                </form>
+            </div>
+            <!-- user -->
+            <div class="user">
+                <a href="login.html"><i class="usericon"></i></a>
+            </div>
+            <!-- liked items -->
+            <div class="like">
+                <a href="#"><i class="likeicon"></i></a>
+            
+                <div class="like-div">
+            
+                    <div class="like-form">
+                        <div class="like-list" name="likelist" action="" method="get">
+                            <h2 class="like-title">Favorite Items</h2>
+                            <div class="like-content"></div>
+                        </div>
+                        <button class="like-btn" type="button" class="buy">View My Favorite</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- user -->
-        <div class="user">
-            <a href="login.html"><i class="usericon"></i></a>
-        </div>
-        <!-- liked items -->
-        <div class="like">
-            <a href="#"><i class="likeicon"></i></a>
-        </div>
+    
     </header>
     <!-- header end -->
 
@@ -175,7 +199,7 @@
 
             <div class="dd">
                 <ul>
-                    <li><a href="#"><em>All products</em></a> </li>
+                    <li><a href="/items"><em>All products</em></a> </li>
                     <li><a href="#">Coats</a> </li>
                     <li><a href="#">Jackets</a> </li>
                     <li><a href="#">Knitwear & Sweatshirts</a> </li>
@@ -286,360 +310,390 @@
                     </a>
                 </div>
             </div>
-    <!-- carousel -->
-            <div class="carousel-bg"></div>
-            <div class="carousel">
-                <div class="carousel_img">
-                    <ul>
-                        <li class="img1">
-                            <a href="#">
-                                <img src="images/carousel1.png" alt="">
-                                <div class="mask"></div>
-                            </a>
-                        </li>
-                        <li class="img2">
-                            <a href="#">
-                                <img src="images/carousel2.png" alt="">
-                                <div class="mask"></div>
-                            </a>
-                        </li>
-                        <li class="img3">
-                            <a href="#">
-                                <img src="images/carousel3.png" alt="">
-                                <div class="mask"></div>
-                            </a>
-                        </li>
-                        <li class="img4">
-                            <a href="#">
-                                <img src="images/carousel4.png" alt="">
-                                <div class="mask"></div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-
-                <!-- left/right arrow in carousel -->
-                <div class="arrow-l">&lt</div>
-                <div class="arrow-r">&gt</div>
-
-                <!-- small circles -->
-                <ol class="circle"></ol>
-
-                <!-- carousel text -->
-                <div class="carousel_text">
-                    <ul></ul>
-                </div>
-            </div>
-
-            <!-- create magnifying window -->
-            <div class="magnify">
-                <div class=""></div>
-            </div>
-
-
-            <div class="carousel-text">
-                <p>NEW IN</p>
-                <p>Discover the latest launches onsite</p>
-                
-            </div>
-
-
+            <!-- carousel -->
             
-        <!-- Recommended for you start -->
-            <div class="rec-title">Recommended For You
-            </div>
-
-            <div class="rec-container">
-                <div class="item active" style="background-image: url(images/carousel1.png);">
-                    <div class="shadow"></div>
-                    <div class="content">
-                        <div class="icon">
-                            <a href=""><i>♡</i></a>
-                            
-                        </div>
-                        <div class="text ">
-                            <div class="title">Brand 1</div>
-                            <div class="detail">Item 1 Description</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item" style="background-image: url(images/carousel2.png);">
-                    <div class="shadow"></div>
-                    <div class="content">
-                        <div class="icon">
-                            <a href=""><i>♡</i></a>
-                        </div>
-                        <div class="text ">
-                            <div class="title">Brand 2</div>
-                            <div class="detail">Item 2 Description</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item" style="background-image: url(images/carousel3.png);">
-                    <div class="shadow"></div>
-                    <div class="content">
-                        <div class="icon">
-                            <a href=""><i>♡</i></a>
-                        </div>
-                        <div class="text ">
-                            <div class="title">Brand 3</div>
-                            <div class="detail">Item 3 Description</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item" style="background-image: url(images/carousel4.png);">
-                    <div class="shadow"></div>
-                    <div class="content">
-                        <div class="icon">
-                            <a href=""><i>♡</i></a>
-                        </div>
-                        <div class="text ">
-                            <div class="title">Brand 4</div>
-                            <div class="detail">Item 4 Description</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item" style="background-image: url(images/carousel1.png);">
-                    <div class="shadow"></div>
-                    <div class="content">
-                        <div class="icon">
-                            <a href=""><i>♡</i></a>
-                        </div>
-                        <div class="text ">
-                            <div class="title">Brand 5</div>
-                            <div class="detail">Item 5 Description</div>
-                        </div>
-                    </div>
-                </div>
                 
+                    <div class="carousel-bg"></div>
+                    <div class="carousel">
+                        <div class="carousel_img">
+                            <ul>
+                                <li class="img1">
+                                    <a href="#">
+                                        <img src="images/carousel1.png" alt="">
+                                        <div class="mask"></div>
+                                    </a>
+                                </li>
+                                <li class="img2">
+                                    <a href="#">
+                                        <img src="images/carousel2.png" alt="">
+                                        <div class="mask"></div>
+                                    </a>
+                                </li>
+                                <li class="img3">
+                                    <a href="#">
+                                        <img src="images/carousel3.png" alt="">
+                                        <div class="mask"></div>
+                                    </a>
+                                </li>
+                                <li class="img4">
+                                    <a href="#">
+                                        <img src="images/carousel4.png" alt="">
+                                        <div class="mask"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                    
+                        <!-- left/right arrow in carousel -->
+                        <div class="arrow-l">&lt</div>
+                        <div class="arrow-r">&gt</div>
+                    
+                        <!-- small circles -->
+                        <ol class="circle"></ol>
+                    
+                    
+                    </div>
                 
-            </div>
+                <!-- create magnifying window -->
+                <div class="magnify">
+                    <div class=""></div>
+                </div>
 
-            <div class="rec-txt">
-                <div class="r-title">Brand 1</div>
-                <div class="r-detail">Item 1 Description</div>
-            </div>
+
+                <div class="carousel-text">
+                    <div>
+                        <a href="index.html">NEW IN</a>
+                        <p>Discover the latest launches onsite</p>
+                    </div>
+                </div>
            
-            
-            
 
 
-        <!-- Recommended for you end -->
+
+
+
+            <!-- Recommended for you start -->
+           
+                <div class="rec-title">RECOMMENDED FOR YOU
+                </div>
+    
+                <div class="rec-container">
+                    <div class="item active" style="background-image: url(images/carousel1.png);">
+                        <div class="shadow"></div>
+                        <div class="content">
+                            <div class="icon">
+                                <a href=""><i>♡</i></a>
+    
+                            </div>
+                            <div class="text ">
+                                <div class="title">Brand 1</div>
+                                <div class="detail">Item 1 Description</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item" style="background-image: url(images/carousel2.png);">
+                        <div class="shadow"></div>
+                        <div class="content">
+                            <div class="icon">
+                                <a href=""><i>♡</i></a>
+                            </div>
+                            <div class="text ">
+                                <div class="title">Brand 2</div>
+                                <div class="detail">Item 2 Description</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item" style="background-image: url(images/carousel3.png);">
+                        <div class="shadow"></div>
+                        <div class="content">
+                            <div class="icon">
+                                <a href=""><i>♡</i></a>
+                            </div>
+                            <div class="text ">
+                                <div class="title">Brand 3</div>
+                                <div class="detail">Item 3 Description</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item" style="background-image: url(images/carousel4.png);">
+                        <div class="shadow"></div>
+                        <div class="content">
+                            <div class="icon">
+                                <a href=""><i>♡</i></a>
+                            </div>
+                            <div class="text ">
+                                <div class="title">Brand 4</div>
+                                <div class="detail">Item 4 Description</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item" style="background-image: url(images/carousel1.png);">
+                        <div class="shadow"></div>
+                        <div class="content">
+                            <div class="icon">
+                                <a href=""><i>♡</i></a>
+                            </div>
+                            <div class="text ">
+                                <div class="title">Brand 5</div>
+                                <div class="detail">Item 5 Description</div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                </div>
+    
+                <div class="rec-txt">
+                    <div class="r-title">Brand 1</div>
+                    <div class="r-detail">Item 1 Description</div>
+                </div>
+           
+
+
+
+
+
+            <!-- Recommended for you end -->
 
 
             <!-- trending clothing display start -->
-            <div class="trending-title">TRENDING 
-                
-            </div>
-            <div class="trending-body">
-                
-                <ul class="trending-container">
-                    <li>
-                        <img src="images/carousel1.png" alt="">
-                        <p></p>
-                        <div class="t-text">
-                            <h4>
-                                Trending Style For Winter 2022
-                            <br>
-                            STYLE 1 FROM DESIGNER 1
-                            </h4>
+            
+                <div class="trending-title">TRENDING
+
+                </div>
+                <div class="trending-body">
+    
+                    <ul class="trending-container">
+                        <li>
+                            <img src="images/carousel1.png" alt="">
+                            <p></p>
+                            <div class="t-text">
+                                <h4>
+                                    Trending Style For Winter 2022
+                                    <br>
+                                    STYLE 1 FROM DESIGNER 1
+                                </h4>
+                            </div>
+                            <a href=""></a>
+                        </li>
+                        <li>
+                            <img src="images/carousel2.png" alt="">
+                            <p></p>
+                            <div class="t-text">
+                                <h4>
+                                    Trending Style For Winter 2022
+                                    <br>
+                                    STYLE 2 FROM DESIGNER 2
+                                </h4>
+                            </div>
+                            <a href=""></a>
+                        </li>
+                        <li>
+                            <img src="images/carousel3.png" alt="">
+                            <p></p>
+                            <div class="t-text">
+                                <h4>
+                                    Trending Style For Winter 2022
+                                    <br>
+                                    STYLE 3 FROM DESIGNER 3
+                                </h4>
+                            </div>
+                            <a href=""></a>
+                        </li>
+                        <li>
+                            <img src="images/carousel4.png" alt="">
+                            <p></p>
+                            <div class="t-text">
+                                <h4>
+                                    Trending Style For Winter 2022
+                                    <br>
+                                    STYLE 4 FROM DESIGNER 4
+                                </h4>
+                            </div>
+                            <a href=""></a>
+                        </li>
+                        <li>
+                            <img src="images/carousel1.png" alt="">
+                            <p></p>
+                            <div class="t-text">
+                                <h4>
+                                    Trending Style For Winter 2022
+                                    <br>
+                                    STYLE 5 FROM DESIGNER 5
+                                </h4>
+                            </div>
+                            <a href=""></a>
+                        </li>
+                        <li>
+                            <img src="images/carousel2.png" alt="">
+                            <p></p>
+                            <div class="t-text">
+                                <h4>
+                                    Trending Style For Winter 2022
+                                    <br>
+                                    STYLE 6 FROM DESIGNER 6
+                                </h4>
+                            </div>
+                            <a href=""></a>
+                        </li>
+                        <li>
+                            <img src="images/carousel3.png" alt="">
+                            <p></p>
+                            <div class="t-text">
+                                <h4>
+                                    Trending Style For Winter 2022
+                                    <br>
+                                    STYLE 7 FROM DESIGNER 7
+                                </h4>
+                            </div>
+                            <a href=""></a>
+                        </li>
+                        <li>
+                            <img src="images/carousel4.png" alt="">
+                            <p></p>
+                            <div class="t-text">
+                                <h4>
+                                    Trending Style For Winter 2022
+                                    <br>
+                                    STYLE 8 FROM DESIGNER 8
+                                </h4>
+                            </div>
+                            <a href=""></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="vacation-look">
+                    <h1>Vacation looks</h1>
+                    <div class="vacation-outfits">
+                        <div class="outfit-box">
+                            <img src="images/carousel1.png" alt="">
+                            <div class="mask">
+                                
+                            </div>
                         </div>
-                        <a href=""></a>
-                    </li>
-                    <li>
-                        <img src="images/carousel2.png" alt="">
-                        <p></p>
-                        <div class="t-text">
-                            <h4>
-                                Trending Style For Winter 2022
-                            <br>
-                            STYLE 2 FROM DESIGNER 2
-                            </h4>
+                        <div class="outfit-box">
+                            <img src="images/carousel2.png" alt="">
+                            <div class="mask">
+                                
+                            </div>
                         </div>
-                        <a href=""></a>
-                    </li>
-                    <li>
-                        <img src="images/carousel3.png" alt="">
-                        <p></p>
-                        <div class="t-text">
-                            <h4>
-                                Trending Style For Winter 2022
-                            <br>
-                            STYLE 3 FROM DESIGNER 3
-                            </h4>
+                        <div class="outfit-box">
+                            <img src="images/carousel3.png" alt="">
+                            <div class="mask">
+                                
+                            </div>
                         </div>
-                        <a href=""></a>
-                    </li>
-                    <li>
-                        <img src="images/carousel4.png" alt="">
-                        <p></p>
-                        <div class="t-text">
-                            <h4>
-                                Trending Style For Winter 2022
-                            <br>
-                            STYLE 4 FROM DESIGNER 4
-                            </h4>
-                        </div>
-                        <a href=""></a>
-                    </li>
-                    <li>
-                        <img src="images/carousel1.png" alt="">
-                        <p></p>
-                        <div class="t-text">
-                            <h4>
-                                Trending Style For Winter 2022
-                            <br>
-                            STYLE 5 FROM DESIGNER 5
-                            </h4>
-                        </div>
-                        <a href=""></a>
-                    </li>
-                    <li>
-                        <img src="images/carousel2.png" alt="">
-                        <p></p>
-                        <div class="t-text">
-                            <h4>
-                                Trending Style For Winter 2022
-                            <br>
-                            STYLE 6 FROM DESIGNER 6
-                            </h4>
-                        </div>
-                        <a href=""></a>
-                    </li>
-                    <li>
-                        <img src="images/carousel3.png" alt="">
-                        <p></p>
-                        <div class="t-text">
-                            <h4>
-                                Trending Style For Winter 2022
-                            <br>
-                            STYLE 7 FROM DESIGNER 7
-                            </h4>
-                        </div>
-                        <a href=""></a>
-                    </li>
-                    <li>
-                        <img src="images/carousel4.png" alt="">
-                        <p></p>
-                        <div class="t-text">
-                            <h4>
-                                Trending Style For Winter 2022
-                            <br>
-                            STYLE 8 FROM DESIGNER 8
-                            </h4>
-                        </div>
-                        <a href=""></a>
-                    </li>
-                </ul>
-            </div>
+                    </div>
+                </div>
+            
 
             <!-- trending clothing display end -->
         </div>
     </div>
 
-<!-- main module end -->
+    <!-- main module end -->
 
-<!-- go back module -->
-<div class="go-back">
-    Back To Top
-</div>
+    <!-- go back module -->
+    <div class="go-back">
+        Back To Top
+    </div>
 
     <!-- footer start -->
     <footer class="footer">
         <!-- <div class="w"> -->
-            <div class="mod_service">
-                <ul>
-                    <li>
-                        <div class="express">
-                            <a href=""><i></i>
-                                <h4>Express Delivery</h4>
-                            </a>
-                        </div>
-                    </li>
+        <div class="mod_service">
+            <ul>
+                <li>
+                    <div class="express">
+                        <a href=""><i></i>
+                            <h4>Express Delivery</h4>
+                        </a>
+                    </div>
+                </li>
 
-                    <li>
-                        <div class="chat">
+                <li>
+                    <div class="chat">
 
-                            <a href=""><i></i>
-                                <h4>Questions?</h4>
-                            </a>
+                        <a href=""><i></i>
+                            <h4>Questions?</h4>
+                        </a>
 
-                        </div>
-                    </li>
+                    </div>
+                </li>
 
-                    <li>
-                        <div class="connect">
-                            <h4>Connect With Us:</h4>
-                            <a href=""><i class="facebook"></i></a>
-                            <a href=""><i class="instagram"></i></a>
-                            <a href=""><i class="twitter"></i></a>
-                            <a href=""><i class="pinterest"></i></a>
-                            <a href=""><i class="youtube"></i></a>
+                <li>
+                    <div class="connect">
+                        <h4>Connect With Us:</h4>
+                        <a href=""><i class="facebook"></i></a>
+                        <a href=""><i class="instagram"></i></a>
+                        <a href=""><i class="twitter"></i></a>
+                        <a href=""><i class="pinterest"></i></a>
+                        <a href=""><i class="youtube"></i></a>
 
 
-                        </div>
-                    </li>
+                    </div>
+                </li>
 
-                </ul>
+            </ul>
+        </div>
+
+        <div class="mod_help">
+
+
+            <div>
+                <dl>
+                    <dt>Customer Service</dt>
+                    <dd><a href="#">Shipping and Returns</a></dd>
+                    <dd><a href="#">Track Your Order</a></dd>
+                    <dd><a href="#">FAQ</a></dd>
+                    <dd><a href="#">Loyalty Programs</a></dd>
+                    <dd><a href="#">Gift cards</a></dd>
+                    <dd><a href="#">Gift packaging</a></dd>
+                    <dd><a href="#">Terms & Conditions</a></dd>
+
+                </dl>
             </div>
-            
-            <div class="mod_help">
-                
-
-                <div>
-                    <dl>
-                        <dt>Customer Service</dt>
-                        <dd><a href="#">Shipping and Returns</a></dd>
-                        <dd><a href="#">Track Your Order</a></dd>
-                        <dd><a href="#">FAQ</a></dd>
-                        <dd><a href="#">Loyalty Programs</a></dd>
-                        <dd><a href="#">Gift cards</a></dd>
-                        <dd><a href="#">Gift packaging</a></dd>
-                        <dd><a href="#">Terms & Conditions</a></dd>
-    
-                    </dl>
-                </div>
-                <div>
-                    <dl>
-                        <dt>About Us</dt>
-                        <dd><a href="#">About Y.CHEN</a></dd>
-                        <dd><a href="#">Careers</a></dd>
-                        <dd><a href="#">Press</a></dd>
-                    </dl>
-                </div>
-                
-
-                <div>
-                    <dl>
-                        <dt>Payments</dt>
-                        <dd><a href="#">VISA</a></dd>
-                        <dd><a href="#">Master Card</a></dd>
-                        <dd><a href="#">American Express</a></dd>
-                        <dd><a href="#">Union Pay</a></dd>
-                        <dd><a href="#">Paypal</a></dd>
-                    </dl>
-                </div>
-
-                <div>
-                    <dl>
-                        <dt>News & Events</dt>
-                        <dd><a href="#">Sign Up To Our News Letter</a></dd>
-                        <dd><a href="#">Recent Events</a></dd>
-                    </dl>
-                </div>
-
+            <div>
+                <dl>
+                    <dt>About Us</dt>
+                    <dd><a href="#">About Y.CHEN</a></dd>
+                    <dd><a href="#">Careers</a></dd>
+                    <dd><a href="#">Press</a></dd>
+                </dl>
             </div>
-            <div class="mod_copyright">
 
-                <div class="copyright">
-                    Y.CHEN © 2022
-                </div>
+
+            <div>
+                <dl>
+                    <dt>Payments</dt>
+                    <dd><a href="#">VISA</a></dd>
+                    <dd><a href="#">Master Card</a></dd>
+                    <dd><a href="#">American Express</a></dd>
+                    <dd><a href="#">Union Pay</a></dd>
+                    <dd><a href="#">Paypal</a></dd>
+                </dl>
             </div>
+
+            <div>
+                <dl>
+                    <dt>News & Events</dt>
+                    <dd><a href="#">Sign Up To Our News Letter</a></dd>
+                    <dd><a href="#">Recent Events</a></dd>
+                </dl>
+            </div>
+
+        </div>
+        <div class="mod_copyright">
+
+            <div class="copyright">
+                Y.CHEN © 2022
+            </div>
+        </div>
         <!-- </div> -->
     </footer>
     <!-- footer end -->
@@ -651,6 +705,7 @@
     <script src="js/trending.js"></script>
     <script src="js/recommend.js"></script>
     <script src="js/items.js"></script>
+    <script src="js/vacation.js"></script>
 
 </body>
 
