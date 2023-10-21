@@ -26,7 +26,7 @@
     <!-- trending clothing display css style sheet -->
     <link rel="stylesheet" href="css/trending.css">
 
-    <link rel="stylesheet" href="public/css/newssignup.css">
+    <link rel="stylesheet" href="css/newssignup.css">
 
 </head>
 
@@ -65,36 +65,80 @@
     <!-- navigation end -->
     <!--  header start -->
     <header class="header w">
-
+    
         <!-- logo -->
-
-        <div class="logo">
-            <ul>
-                <li>
-                    <a href="index.html" title="YC"><img src="images/logo.png" alt="logo"></a>
-                </li>
-            </ul>
-
-        </div>
-        <!-- search -->
         <div class="search">
             <input type="search" name="" id="" placeholder="search">
             <button>OK</button>
         </div>
-
-        <!-- shopping cart -->
-        <div class="shopcart">
-            <a href="#"><i class="bag"></i></a>
-            <a href="#"><i class="count">0</i></a>
+        <div class="logo">
+            <ul>
+                <li>
+                    <a href="/" title="YC"><img src="images/logo.png" alt="logo"></a>
+                </li>
+            </ul>
+    
         </div>
-        <!-- user -->
-        <div class="user">
-            <a href="#"><i class="usericon"></i></a>
+        <!-- search -->
+    
+    
+        <div id="nav-right">
+            <!-- shopping cart -->
+            <div class="shopcart">
+                <a href="#"><i class="bag"></i></a>
+                <a href="#"><i class="count">0</i></a>
+    
+                <form class="cart-list" name="cartlist" action="cart.html" method="get">
+                    <h2 class="cart-title">Shopping Cart</h2>
+                    <div class="cart-content"></div>
+                    <table class="total-table">
+                        <caption class="summary-title">Summary</caption>
+                        <tbody>
+                            <tr class="line-item">
+                                <th scope="row">Subtotal</th>
+                                <td>
+                                    <span class="subtotal">$0.00</span>
+                                    <p></p>
+                                </td>
+                            </tr>
+                            <tr class="line-item">
+                                <th scope="row">Delivery</th>
+                                <td>
+                                    <span class="delivery">$0.00</span>
+                                    <p></p>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td colspan="2" class="line-break"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="sum">Total</th>
+                                <td class="sum-num">
+                                    <div>USD
+                                        <span class="total">$0.00</span>
+                                    </div>
+                                    <p>Tax Calculated At Checkout</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="buy">Buy Now</button>
+    
+    
+    
+                </form>
+            </div>
+            <!-- user -->
+            <div class="user">
+                <a href="login.html"><i class="usericon"></i></a>
+            </div>
+            <!-- liked items -->
+            <div class="like">
+                <a href="#"><i class="likeicon"></i></a>
+            </div>
         </div>
-        <!-- liked items -->
-        <div class="like">
-            <a href="#"><i class="likeicon"></i></a>
-        </div>
+    
     </header>
     <!-- header end -->
 
