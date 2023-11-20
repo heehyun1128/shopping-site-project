@@ -170,7 +170,7 @@
 .header .cart-list{
     position: absolute;
     right: 3vw;
-    top: 20px;
+    top: 6vh;
     width: 300px;
     height: 450px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -178,6 +178,19 @@
     border:1px solid rgb(200, 200, 200);
     z-index:9999;
     display:none;
+}
+.header .user-list{
+    position: absolute;
+    right: 3vw;
+    top: 10vh;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(255, 255, 255);
+    border:1px solid rgb(200, 200, 200);
+    z-index:9999;
+    /* display:none; */
 }
 
 .header .cart-list .cart-title{
