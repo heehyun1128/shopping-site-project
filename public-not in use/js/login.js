@@ -137,7 +137,7 @@ window.addEventListener("load",function(){
 
         if (pwdConValue===""){
             setError(pwdConArea,"Password confirmation cannot be blank.")
-        }else if(pwdValue===pwdConValue){
+        }else if(pwdValue!==pwdConValue){
             setError(pwdConArea,"Password confirmation does not match password.")
         }else{
             setSuccess(pwdConArea)

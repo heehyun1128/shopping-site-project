@@ -80,7 +80,7 @@ window.addEventListener("load",function(){
     pwdConInput.addEventListener("blur",function(){
         if (this.value===""){
             setError(pwdConArea,"Password confirmation cannot be blank.")
-        }else if(this.value.length===0 || pwdInput.value!==this.value){
+        }else if(this.value.length===0 || Number(pwdInput.value)!==Number(this.value)){
             setError(pwdConArea,"Password confirmation does not match password.")
         }else{
             setSuccess(pwdConArea)
@@ -137,7 +137,7 @@ window.addEventListener("load",function(){
 
         if (pwdConValue===""){
             setError(pwdConArea,"Password confirmation cannot be blank.")
-        }else if(pwdValue===pwdConValue){
+        }else if(pwdValue!==pwdConValue){
             setError(pwdConArea,"Password confirmation does not match password.")
         }else{
             setSuccess(pwdConArea)
