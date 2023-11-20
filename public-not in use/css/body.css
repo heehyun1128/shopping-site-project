@@ -10,19 +10,24 @@
     /* position:relative; */
 /* } */
 .new_arr{
-    width: 1200px;
-    position: relative;
+    width: 100vw;
+    /* position: relative; */
     height:800px;
     
 }
-
+.new_arr .newarr_img{
+    width:100vw;
+}
 .new_arr .newarr_img img{
     width:100%;
     
     position:absolute;
     left:0;
 }
-
+.new_arr .newarr_img #video{
+    width: 100vw !important;
+    height: 70vh !important
+}
 /* .new_arr .collection{
     position:absolute;
     margin-top: 260px;

@@ -14,7 +14,7 @@
     text-align: center;
 }
 .new_arr{
-    width: 1200px;
+    width: 100vw;
     /* position: relative; */
     height:800px;
 
@@ -27,10 +27,13 @@
     left:20%;
     
 } */
-
+#video{
+    width: 100vw;
+    /* height: 90vh; */
+}
 @media screen and (max-width: 1920px) {
     .newarr_img {
-        height:800px;
+        height:80vh;
         overflow: hidden;
         position: absolute;
         
@@ -75,17 +78,25 @@
     position:absolute;
     margin-top: 30px;
     margin-left: 50px;
+   
+    
+}
+
+.new_arr .designer:hover h2{
+    color: rgb(186, 134, 151);
+    font-weight: 700;
     
     
 }
 
 .new_arr .designer a h2{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:rgba(0, 0, 0,.6);
+    color:rgba(227, 225, 216, 0.8);
     font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
 }
+
 .carousel-bg{
     position:absolute;
     width:1000px;
@@ -268,7 +279,7 @@
 }
 
 .main{
-    height:8000px;
+    height:400vh;
     /* position:relative; */
 }
 
@@ -300,13 +311,7 @@
     
 }
 
-.new_arr .designer a h2{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:rgba(0, 0, 0,.6);
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 30px;
-    font-weight: 700;
-}
+
 .carousel-bg{
     position:absolute;
     width:1000px;
@@ -314,7 +319,7 @@
     overflow: hidden;
     top:1150px;
     left:150px;
-    background-color: rgb(233, 221, 221);
+    background-color: rgba(227, 225, 216, 0.8);
 }
 .carousel, .carousel-text{
     position:absolute;
@@ -502,3 +507,4 @@
 .current {
     background-color: #fff;
 }
+
