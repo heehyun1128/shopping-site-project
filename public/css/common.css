@@ -629,13 +629,15 @@ justify-content: center;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .mod_service {
+    display: flex;
+    justify-content: center;
     height: 40px;
     border-bottom: 1px solid #ccc;
     
 }
 .mod_service ul li {
     float: left;
-    width: 380px;
+    /* width: 380px; */
     height: 50px;
     padding-left: 100px;
     
@@ -806,4 +808,20 @@ justify-content: center;
 }
 .go-back:hover{
     cursor:pointer;
+}
+
+#fav-page-nav #grid{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+}
+
+#fav-page-nav #grid #product #img-box{
+    width: 20vw;
+    height: 30vh;
+}
+#fav-page-nav #grid #product #img-box img{
+    width: 90%;
 }
