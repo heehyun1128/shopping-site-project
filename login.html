@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="css/body.css">
     <!-- trending clothing display css style sheet -->
     <link rel="stylesheet" href="css/trending.css">
-
+    <link rel="stylesheet" href="css/like.css">
     <link rel="stylesheet" href="css/login.css">
 
 </head>
@@ -135,11 +135,55 @@
             </div>
             <!-- user -->
             <div class="user">
-                <a href="login.html"><i class="usericon"></i></a>
+                <a href="/user-page"><i class="usericon"></i></form>
             </div>
             <!-- liked items -->
             <div class="like">
                 <a href="#"><i class="likeicon"></i></a>
+
+                <div class="like-div">
+            
+                    <div class="like-form">
+                        <div class="like-list" name="likelist" action="" method="get">
+                            <h2 class="like-title">Favorite Items</h2>
+                            <div class="like-content">
+                                <div id="img-div">
+                                    <div id="product">
+                                        <div id="img-box">
+        
+                                            <img id='user-page-order-img' src="images/carousel9.png" alt="">
+                                        </div>
+                                        <h4 id="brand">Brand 9</h4>
+                                    </div>
+                                    <div id="product">
+        
+                                        <div id="img-box">
+                                            <img id='user-page-order-img' src="images/carousel10.png" alt="">
+                                        </div>
+                                        <h4 id="brand">Brand 10</h4>
+                                    </div>
+                                    <div id="product">
+        
+                                        <div id="img-box">
+                                            <img id='user-page-order-img' src="images/carousel2.png" alt="">
+                                        </div>
+                                        <h4 id="brand">Brand 2</h4>
+                                    </div>
+                                    <div id="product">
+        
+                                        <div id="img-box">
+                                            <img id='user-page-order-img' src="images/carousel8.png" alt="">
+                                        </div>
+                                        <h4 id="brand">Brand 8</h4>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <button class="like-btn" type="button" ><a href="/my-favorite">View My Favorite</a></button>
+                    </div>
+                    <div class="close-btn" type="button" >Close Window</div>
+                </div>
             </div>
         </div>
     
@@ -464,7 +508,7 @@
     <script src="js/animate.js"></script>
     <script src="js/index.js"></script>
     <script src="js/login.js"></script>
-    
+    <script src="js/like.js"></script>
 
 </body>
 

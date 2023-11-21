@@ -196,7 +196,7 @@ window.addEventListener("load",function(){
 
             }
             dd[i].style.display = "block"
-            dd[i].style.left = i * 210 + "px"
+            dd[i].style.left = i * dt[i].offsetWidth + "px"
         })
 
         nav.addEventListener("mouseleave", function () {
