@@ -22,7 +22,7 @@ function movedir(e,obj){
         moveAngle = Math.round((deg + 180) / 90) % 4,
         direct = ["right","down","left","up"]
         
-        console.log(moveAngle)
+        // console.log(moveAngle)
 
 
     return direct[moveAngle]
