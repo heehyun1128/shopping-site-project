@@ -131,7 +131,7 @@ app.post("/signupform", function (req, res) {
 
     //get the data that got sent back:
     response.on("data", function (data) {
-      console.log(JSON.parse(data));
+     
       process.stdout.write(data)
     })
 

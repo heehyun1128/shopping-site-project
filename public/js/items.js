@@ -17,7 +17,7 @@ window.addEventListener("load", function () {
     let filterItem = document.querySelectorAll(".filter-item-list")
     let addBtn = document.querySelectorAll(".add button")
     // console.log(addBtn)
-    console.log(dropdownlistdd)
+    // console.log(dropdownlistdd)
 
     let itemBox = document.querySelectorAll(".item-box")
 
@@ -213,7 +213,7 @@ window.addEventListener("load", function () {
     //Update cart total
     function updateCartTotal() {
         let cartItems = document.querySelectorAll(".cart-list .item-box")
-        console.log(cartItems.length)
+        // console.log(cartItems.length)
         let subtotalPrice = 0
 
         for (let i = 0; i < cartItems.length; i++) {
@@ -245,7 +245,7 @@ window.addEventListener("load", function () {
         for (let i = 0; i < cartItems.length; i++) {
             let itemQty = cartItems[i].querySelector("#product-quantity").value
             count += parseInt(itemQty)
-            console.log(cartItems.length)
+            // console.log(cartItems.length)
         }
         let cartCount = document.querySelector(".shopcart .count")
         cartCount.innerText = count
@@ -355,7 +355,7 @@ window.addEventListener("load", function () {
                 if (!filterBox[i].checked) {
                     for (let i = 0; i < productBox.length; i++) {
                         productBox[i].style.display = "block"
-                        console.log(productBox[i])
+                        // console.log(productBox[i])
                     }
                 } else {
                     if (this.checked) {
@@ -377,7 +377,7 @@ window.addEventListener("load", function () {
 
         // console.log(productBox.length)
         for (let i = 0; i < productBox.length; i++) {
-            console.log(filterName[i])
+            // console.log(filterName[i])
             let itemType = filterName[i].innerText
 
             if (itemType == filterItem) {
@@ -432,7 +432,7 @@ window.addEventListener("load", function () {
         flag4 = true
         for (i = 0; i < dropdownItems.length; i++) {
             dropdownItems[i].style.backgroundColor = "#f1f1f1"
-            console.log(dropdownItems[i])
+            // console.log(dropdownItems[i])
         }
         lowToHigh.style.backgroundColor = "rgb(99, 99, 99, .5)"
         let price = document.querySelectorAll(".price")
@@ -573,7 +573,7 @@ window.addEventListener("load", function () {
             shopContent.innerHTML = ""
             for (let i = 0; i < productBox.length; i++) {
                 if(sale[i]){
-                    arr.push(sale[i].innerText)
+                    
                 }
                 arr.sort()
             }
@@ -601,7 +601,7 @@ favBtns.forEach(favBtn=>{
     favBtn.onclick = ()=>{
         const favImg = favBtn.parentElement.parentElement.querySelector("img")
         const favImgSrc = favImg.src
-        console.log(favImgSrc)
+        // console.log(favImgSrc)
 
         const name=favBtn.parentElement.parentElement.parentElement.querySelector(".text").querySelector(".product-name").innerText
         const price=favBtn.parentElement.parentElement.parentElement.querySelector(".text").querySelector(".price").innerText

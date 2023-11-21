@@ -60,5 +60,4 @@ app.post("/", function(req,res){
 })
 
 app.listen(3000,function(){
-  console.log("Server is running on port 3000.")
 }) //in Hyper,type nodemon app.js to run this js file;
