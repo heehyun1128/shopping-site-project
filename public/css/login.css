@@ -12,7 +12,7 @@
 
   @media screen and (max-width: 1920px) {
     .w{
-        width:100%;
+        width:100vw;
     }
     .newsletter-signup{
         position: relative;
@@ -45,7 +45,7 @@
 
   @media screen and (max-width: 1280px) {
     .w{
-        width:100%;
+        width:100vw;
     }
 
     .newsletter-signup{
@@ -105,7 +105,11 @@
     top:100px;
     left:400px;
 } */
-
+html,
+body {
+  height: 100%;
+  max-width: 100vw !important;
+}
 .l-container .form{
     position: absolute;
     top:-10%;
@@ -406,7 +410,9 @@
 
 
 
-
+.newsletter-signup{
+    width: 20vw;
+}
 .newsletter-signup button{
     position: absolute;
     top:220px;
