@@ -420,8 +420,12 @@ window.addEventListener("load", function () {
 
 
 
-    let flag1 = true
-
+    let flag1
+    let flag2
+    let flag3
+    let flag4
+    
+    flag1 = true
     lowToHigh.addEventListener("click", function () {
         flag2 = true
         flag3 = true
@@ -437,7 +441,10 @@ window.addEventListener("load", function () {
             flag1 = false
             shopContent.innerHTML = ""
             for (let i = 0; i < productBox.length; i++) {
-                arr.push(price[i].innerText.substr(1,))
+                if (price[i]) {
+                    arr.push(price[i].innerText.substr(1,));
+                }
+              
                 arr.sort()
             }
             for (let i = 0; i < arr.length; i++) {
@@ -478,7 +485,9 @@ window.addEventListener("load", function () {
             flag2 = false
             shopContent.innerHTML = ""
             for (let i = 0; i < productBox.length; i++) {
-                arr.push(price[i].innerText.substr(1,))
+                if (price[i]) {
+                    arr.push(price[i].innerText.substr(1,));
+                }
                 arr.sort(function (a, b) {
                     return b - a;
                 })
@@ -563,7 +572,9 @@ window.addEventListener("load", function () {
             flag4 = false
             shopContent.innerHTML = ""
             for (let i = 0; i < productBox.length; i++) {
-                arr.push(sale[i].innerText)
+                if(sale[i]){
+                    arr.push(sale[i].innerText)
+                }
                 arr.sort()
             }
             for (let i = 0; i < arr.length; i++) {
