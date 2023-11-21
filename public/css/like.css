@@ -47,7 +47,7 @@
   /* flex: 1; */
 }
 .like-content{
-  /* height:80%; */
+  height:80%;
   /* flex: 8; */
 }
 .like-btn{
@@ -57,6 +57,17 @@
   border-radius: 10px;
   position: absolute;
   bottom:15px;
+}
+
+.close-btn{
+  z-index:99999;
+  width: 30%;
+  height:40px;
+  border-radius: 10px;
+  position: absolute;
+  bottom:10px;
+  right: 10px;
+  cursor: pointer;
 }
 
 .fav-div-style{

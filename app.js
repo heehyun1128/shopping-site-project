@@ -65,7 +65,12 @@ app.post("/", function (req, res) {
 
 
 
-
+app.get('/user-page',(req,res)=>{
+  res.sendFile(__dirname + "/user_page.html");
+})
+app.get('/my-favorite',(req,res)=>{
+  res.sendFile(__dirname + "/my-favorite.html");
+})
 
 
 app.get("/login-signup", function (req, res) {

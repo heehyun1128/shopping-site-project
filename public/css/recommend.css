@@ -39,7 +39,7 @@
     top:2200px;
     left:10%;
     overflow: hidden;
-   
+   background-color: rgba(227, 225, 216, 0.8);
     flex-wrap: nowrap;
   
 }

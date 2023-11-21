@@ -137,7 +137,8 @@
             </div>
             <!-- user -->
             <div class="user">
-                <a href="login.html"><i class="usericon"></i></a>
+                <a href="/user-page"><i class="usericon"></i></form>
+                
             </div>
             <!-- liked items -->
             <div class="like">
@@ -148,10 +149,43 @@
                     <div class="like-form">
                         <div class="like-list" name="likelist" action="" method="get">
                             <h2 class="like-title">Favorite Items</h2>
-                            <div class="like-content"></div>
+                            <div class="like-content">
+                                <div id="img-div">
+                                    <div id="product">
+                                        <div id="img-box">
+        
+                                            <img id='user-page-order-img' src="images/carousel9.png" alt="">
+                                        </div>
+                                        <h4 id="brand">Brand 9</h4>
+                                    </div>
+                                    <div id="product">
+        
+                                        <div id="img-box">
+                                            <img id='user-page-order-img' src="images/carousel10.png" alt="">
+                                        </div>
+                                        <h4 id="brand">Brand 10</h4>
+                                    </div>
+                                    <div id="product">
+        
+                                        <div id="img-box">
+                                            <img id='user-page-order-img' src="images/carousel2.png" alt="">
+                                        </div>
+                                        <h4 id="brand">Brand 2</h4>
+                                    </div>
+                                    <div id="product">
+        
+                                        <div id="img-box">
+                                            <img id='user-page-order-img' src="images/carousel8.png" alt="">
+                                        </div>
+                                        <h4 id="brand">Brand 8</h4>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
-                        <button class="like-btn" type="button" class="buy">View My Favorite</button>
+                        <button class="like-btn" type="button" ><a href="/my-favorite">View My Favorite</a></button>
                     </div>
+                    <div class="close-btn" type="button" >Close Window</div>
                 </div>
             </div>
         </div>
@@ -293,7 +327,15 @@
                 <div class="newarr_img">
                     <a href="#">
                         <div>
-                            <img src="images/main_img.JPG" alt="new_arrivals">
+                            <video id='video' controls autoplay loop muted>
+                                <!-- Provide the path to your video file -->
+                                <source src="images/video.mp4" type="video/mp4">
+                                <!-- You can add multiple source elements for different video formats -->
+                                <!-- <source src="your-video-file.webm" type="video/webm"> -->
+                                <!-- <source src="your-video-file.ogv" type="video/ogg"> -->
+                                
+                              </video>
+                            <!-- <img src="images/main_img.JPG" alt="new_arrivals"> -->
                         </div>
                     </a>
                 </div>
@@ -306,7 +348,7 @@
 
                 <div class="designer">
                     <a href="">
-                        <h2>Designer Story - YI CHEN</h2>
+                        <h2>Discover the fashion trends for 2024</h2>
                     </a>
                 </div>
             </div>
@@ -375,83 +417,86 @@
 
             <!-- Recommended for you start -->
            
-                <div class="rec-title">RECOMMENDED FOR YOU
-                </div>
-    
-                <div class="rec-container">
-                    <div class="item active" style="background-image: url(images/recommend1.jpg);">
-                        <div class="shadow"></div>
-                        <div class="content">
-                            <div class="icon">
-                                <a href=""><i>♡</i></a>
-    
-                            </div>
-                            <div class="text ">
-                                <div class="title">Brand 1</div>
-                                <div class="detail">Item 1 Description</div>
+                
+                    <div class="rec-title">
+                        RECOMMENDED FOR YOU
+                    </div>
+        
+                    <div class="rec-container">
+                        <div class="item active" style="background-image: url(images/recommend1.jpg);">
+                            <div class="shadow"></div>
+                            <div class="content">
+                                <div class="icon">
+                                    <a href=""><i>♡</i></a>
+        
+                                </div>
+                                <div class="text ">
+                                    <div class="title">Brand 1</div>
+                                    <div class="detail">Item 1 Description</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-    
-                    <div class="item" style="background-image: url(images/recommend2.jpg);">
-                        <div class="shadow"></div>
-                        <div class="content">
-                            <div class="icon">
-                                <a href=""><i>♡</i></a>
-                            </div>
-                            <div class="text ">
-                                <div class="title">Brand 2</div>
-                                <div class="detail">Item 2 Description</div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="item" style="background-image: url(images/recommend3.jpg);">
-                        <div class="shadow"></div>
-                        <div class="content">
-                            <div class="icon">
-                                <a href=""><i>♡</i></a>
-                            </div>
-                            <div class="text ">
-                                <div class="title">Brand 3</div>
-                                <div class="detail">Item 3 Description</div>
+        
+                        <div class="item" style="background-image: url(images/recommend2.jpg);">
+                            <div class="shadow"></div>
+                            <div class="content">
+                                <div class="icon">
+                                    <a href=""><i>♡</i></a>
+                                </div>
+                                <div class="text ">
+                                    <div class="title">Brand 2</div>
+                                    <div class="detail">Item 2 Description</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-    
-                    <div class="item" style="background-image: url(images/recommend4.jpg);">
-                        <div class="shadow"></div>
-                        <div class="content">
-                            <div class="icon">
-                                <a href=""><i>♡</i></a>
-                            </div>
-                            <div class="text ">
-                                <div class="title">Brand 4</div>
-                                <div class="detail">Item 4 Description</div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="item" style="background-image: url(images/recommend5.jpg);">
-                        <div class="shadow"></div>
-                        <div class="content">
-                            <div class="icon">
-                                <a href=""><i>♡</i></a>
-                            </div>
-                            <div class="text ">
-                                <div class="title">Brand 5</div>
-                                <div class="detail">Item 5 Description</div>
+        
+                        <div class="item" style="background-image: url(images/recommend3.jpg);">
+                            <div class="shadow"></div>
+                            <div class="content">
+                                <div class="icon">
+                                    <a href=""><i>♡</i></a>
+                                </div>
+                                <div class="text ">
+                                    <div class="title">Brand 3</div>
+                                    <div class="detail">Item 3 Description</div>
+                                </div>
                             </div>
                         </div>
+        
+                        <div class="item" style="background-image: url(images/recommend4.jpg);">
+                            <div class="shadow"></div>
+                            <div class="content">
+                                <div class="icon">
+                                    <a href=""><i>♡</i></a>
+                                </div>
+                                <div class="text ">
+                                    <div class="title">Brand 4</div>
+                                    <div class="detail">Item 4 Description</div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="item" style="background-image: url(images/recommend5.jpg);">
+                            <div class="shadow"></div>
+                            <div class="content">
+                                <div class="icon">
+                                    <a href=""><i>♡</i></a>
+                                </div>
+                                <div class="text ">
+                                    <div class="title">Brand 5</div>
+                                    <div class="detail">Item 5 Description</div>
+                                </div>
+                            </div>
+                        </div>
+        
+        
                     </div>
-    
-    
-                </div>
-    
-                <div class="rec-txt">
-                    <div class="r-title">Brand 1</div>
-                    <div class="r-detail">Item 1 Description</div>
-                </div>
+        
+                    <div class="rec-txt">
+                        <div class="r-title">Brand 1</div>
+                        <div class="r-detail">Item 1 Description</div>
+                    </div>
+       
            
 
 
@@ -567,13 +612,13 @@
                         </li>
                     </ul>
                 </div>
-                <div class="vacation-look">
+                <!-- <div class="vacation-look">
                     <h1>Vacation looks</h1>
                     <div class="vacation-outfits">
                         <div class="outfit-box">
                             <img src="images/carousel1.png" alt="">
                             <div class="mask">
-                                
+                                <p></p>
                             </div>
                         </div>
                         <div class="outfit-box">
@@ -590,7 +635,7 @@
                         </div>
                     </div>
                 </div>
-            
+             -->
 
             <!-- trending clothing display end -->
         </div>
@@ -661,7 +706,7 @@
             <div>
                 <dl>
                     <dt>About Us</dt>
-                    <dd><a href="#">About Y.CHEN</a></dd>
+                    <dd><a href="https://www.linkedin.com/in/yi-c-452811132/" target="_blank">About Y.CHEN</a></dd>
                     <dd><a href="#">Careers</a></dd>
                     <dd><a href="#">Press</a></dd>
                 </dl>
@@ -706,6 +751,7 @@
     <script src="js/recommend.js"></script>
     <script src="js/items.js"></script>
     <script src="js/vacation.js"></script>
+    <script src="js/like.js"></script>
 
 </body>
 
