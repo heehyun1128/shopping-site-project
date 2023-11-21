@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, '/public')));
-
+require('dotenv').config();
 
 
 
@@ -108,15 +108,14 @@ app.post("/signupform", function (req, res) {
   const jsonData = JSON.stringify(data);
 
 
-  const mailchimpUrl = "https://us11.api.mailchimp.com/3.0/lists/be04038ca5"; //be04038ca5 is the list id
+  const mailchimpUrl = process.env.MAILCHIMP_URL; 
   //us11 is the last part of API key
   
 
   const options = {
     method: "POST",
-    auth: "yichen1128:544c1d8f2118b62aed7a9bb1e027661b-us11" //yichen1128 是随便起的user name然后冒号后边是api key
-    //new API key: 544c1d8f2118b62aed7a9bb1e027661b-us11
-//old API KEY:ca0deb8323da62f3bd39ee29e15a6863-us11
+    auth: process.env.AUTH
+    
   };
 
   //use https.request to post data to an external resource

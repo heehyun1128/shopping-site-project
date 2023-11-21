@@ -71,7 +71,8 @@ This project is a static frontend project with features built by vanilla JavaScr
     - On http://localhost:3000/items#, A user is able to add products to their shopping cart by clicking on the plus(+) icon located on individual product card.
 
 
-
+## Upcoming Features
+    -   Mobile Site
 
 
 
