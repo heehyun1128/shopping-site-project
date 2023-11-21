@@ -573,7 +573,7 @@ window.addEventListener("load", function () {
             shopContent.innerHTML = ""
             for (let i = 0; i < productBox.length; i++) {
                 if(sale[i]){
-                    
+                    arr.push(sale[i].innerText)
                 }
                 arr.sort()
             }
@@ -625,7 +625,3 @@ favBtns.forEach(favBtn=>{
 
 
 })
-
-
-
-
