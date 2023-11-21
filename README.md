@@ -1,19 +1,17 @@
-# Moment
+# Y.CHEN DESIGN
 
 
 ## Project Summary
-This web project is crafted using HTML, CSS, and vanilla JavaScript for DOM/BOM interactions. It functions as an e-commerce platform dedicated to the sale of designer fashion products.
-
-## Wiki Link
+This project is crafted using HTML, CSS, and vanilla JavaScript for DOM/BOM interactions. It is an e-commerce platform dedicated to the sale of designer fashion products.
 
 ## Link to Live Site
 
 https://unusual-eel-clothes.cyclic.app/
 
 ## Contact the Project Owner
-linkedin.com/in/yi-c-452811132
-## Technologies Used
+https://linkedin.com/in/yi-c-452811132
 
+## Technologies Used
 
 > HTML 5
 
@@ -24,7 +22,7 @@ linkedin.com/in/yi-c-452811132
 > MailChimp
 
 
-Hosting:
+## Hosting
 > Cyclic.com
 
 
@@ -39,7 +37,7 @@ Hosting:
 
 *  Install dependencies
 
-      >npm install
+    - npm install
 
 *  Start the project 
     - cd to frontend directory and run npm start
@@ -75,12 +73,5 @@ This project is a static frontend project with features built by vanilla JavaScr
 
 
 
-## Upcoming Features
-
-
-
-* Google Map
-* Recommendations
-* Hash Tags
 
 
