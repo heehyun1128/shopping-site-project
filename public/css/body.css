@@ -9,6 +9,8 @@
     height:8000px;
     /* position:relative; */
 /* } */
+
+
 .main{
     width: 100%;
     text-align: center;
@@ -89,8 +91,22 @@
     position:absolute;
     margin-top: 30vh;
     margin-left: 40vw;
-   
     
+    
+}
+
+.new_arr #view-new-in{
+    position:absolute;
+    margin-top: 40vh;
+    margin-left: 10vw;
+    color:rgb(255, 255, 255)
+
+}
+.new_arr #view-new-in:hover{
+
+    color:rgb(135, 173, 157);
+    font-weight: 700;
+
 }
 .new_arr h1{
     color: rgb(135, 173, 157);
@@ -120,6 +136,8 @@
     left:150px;
     background-color: rgb(233, 221, 221);
 }
+
+
 .carousel,
 .carousel-text{
     position:absolute;
