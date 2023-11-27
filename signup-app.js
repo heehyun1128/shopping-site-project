@@ -44,12 +44,12 @@ app.post("/",function(req,res){
   const jsonData = JSON.stringify(data);
 
 
-  const url = "https://us11.api.mailchimp.com/3.0/lists/be04038ca5"; //be04038ca5 is the list id
-  //us11 is the last part of API key
+  const url = process.env.MAILCHIMP_URL; //be.....ca5 is the list id
+ 
 
   const options = {
     method: "POST",
-    auth: "yichen1128:ca0deb8323da62f3bd39ee29e15a6863-us11" //yichen1128 是随便起的user name然后冒号后边是api key
+    auth: process.env.SIGN_UP_API_KEY
 
   };
 

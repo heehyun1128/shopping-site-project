@@ -48,9 +48,10 @@ window.addEventListener("load",function(){
 
 
     usernameInput.addEventListener("blur",function(){
+      
         if(this.value.length===0){
             setError(usernameArea,"Username cannot be blank.")
-        }else if(this.value.length<6 || this.length.value>16){
+        }else if(this.value.length<6 || this.value.length>16){
             setError(usernameArea,"Username must be between 6 to 16 digits long.")
         }else{
             setSuccess(usernameArea)
