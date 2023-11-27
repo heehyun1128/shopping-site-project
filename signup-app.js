@@ -92,11 +92,7 @@ app.listen(process.env.PORT || 3000,function(){
   console.log("Server is running on port 3000");
 });
 
-//API Key got from mailchimp:
-//ca0deb8323da62f3bd39ee29e15a6863-us11
 
-//list id
-//be04038ca5
 
 /*
 use bootstrap (go to the example section) to get the signup form html file
